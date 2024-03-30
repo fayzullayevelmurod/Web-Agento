@@ -112,6 +112,7 @@ body {
   flex-direction: column;
   gap: 14px;
   width: 100%;
+  min-width: 100px;
 }
 .language__box .dropdown > div > div {
   display: flex;

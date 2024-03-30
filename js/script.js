@@ -26,12 +26,10 @@ var swiper = new Swiper(".mySwiper2", {
 });
 
 const $lgContainer = document.querySelector(".mySwiper");
-console.log($lgContainer);
 const lg = lightGallery($lgContainer, {
   showZoomInOutIcons: true,
   actualSize: false,
   selector: ".swiper-slide > .lightgallery > a",
-  // licenseKey: "your_license_key",
   speed: 300,
   controls: true,
   loop: false,
@@ -48,4 +46,15 @@ likeBtn.addEventListener("click", () => {
     likeBtn.textContent = "Like";
   }
   likeBtn.classList.toggle("active");
+});
+
+// select language
+document.querySelectorAll(".option__value").forEach((option) => {
+  option.addEventListener("click", () => {
+    const selectedValue = option.querySelector(".country__name").textContent;
+    const dropdown = option.closest(".dropdown");
+    const selectedBox = document.querySelector(".eng");
+    selectedBox.innerHTML = option.innerHTML;
+    dropdown.classList.remove("open");
+  });
 });
