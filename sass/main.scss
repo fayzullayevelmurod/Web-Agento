@@ -97,6 +97,7 @@ body {
     transform-origin: top;
     transition: transform 0.3s ease-in-out;
     z-index: 10;
+    min-width: 100px;
 
     & > div {
       padding: 14px 12px;
@@ -107,9 +108,10 @@ body {
       flex-direction: column;
       gap: 14px;
       width: 100%;
-      min-width: 100px;
 
-      & > div {
+      align-items: start;
+
+      .option__value {
         display: flex;
         gap: 4px;
         align-items: center;
@@ -130,7 +132,8 @@ body {
     transform: translateY(3px);
   }
 
-  & > div {
+  .option__value,
+  .eng {
     display: flex;
     align-items: center;
     justify-content: end;

@@ -102,6 +102,7 @@ body {
   transform-origin: top;
   transition: transform 0.3s ease-in-out;
   z-index: 10;
+  min-width: 100px;
 }
 .language__box .dropdown > div {
   padding: 14px 12px;
@@ -112,9 +113,9 @@ body {
   flex-direction: column;
   gap: 14px;
   width: 100%;
-  min-width: 100px;
+  align-items: start;
 }
-.language__box .dropdown > div > div {
+.language__box .dropdown > div .option__value {
   display: flex;
   gap: 4px;
   align-items: center;
@@ -132,7 +133,8 @@ body {
 .language__box:hover .arrow__down {
   transform: translateY(3px);
 }
-.language__box > div {
+.language__box .option__value,
+.language__box .eng {
   display: flex;
   align-items: center;
   justify-content: end;

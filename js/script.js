@@ -51,10 +51,9 @@ likeBtn.addEventListener("click", () => {
 // select language
 document.querySelectorAll(".option__value").forEach((option) => {
   option.addEventListener("click", () => {
-    const selectedValue = option.querySelector(".country__name").textContent;
-    const dropdown = option.closest(".dropdown");
     const selectedBox = document.querySelector(".eng");
+    const valueChildEng = document.querySelector(".option__value .eng");
     selectedBox.innerHTML = option.innerHTML;
-    dropdown.classList.remove("open");
+    valueChildEng.style.display = "none";
   });
 });
