@@ -594,10 +594,10 @@ body {
   overflow: hidden;
 }
 .media__intro-slider img {
-  overflow: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 304px;
-  width: 101%;
-  margin-left: -1px;
+  width: 100%;
 }
 .media__intro-slider .swiper-slide:not(.swiper-slide-active) {
   height: auto;

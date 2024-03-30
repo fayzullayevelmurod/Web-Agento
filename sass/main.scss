@@ -610,10 +610,9 @@ body {
   height: 304px;
   overflow: hidden;
   img {
-    overflow: cover;
+    object-fit: cover;
     height: 304px;
-    width: 101%;
-    margin-left: -1px;
+    width: 100%;
   }
   .swiper-slide:not(.swiper-slide-active) {
     height: auto;
