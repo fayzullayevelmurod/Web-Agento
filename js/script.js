@@ -26,26 +26,57 @@ var swiper = new Swiper(".mySwiper2", {
 });
 
 const $lgContainer = document.querySelector(".mySwiper");
+
 const lg = lightGallery($lgContainer, {
   showZoomInOutIcons: true,
   actualSize: false,
-  selector: ".swiper-slide > .lightgallery > a",
+  selector: ".swiper-slide .lightgallery  a",
+  speed: 300,
+  controls: true,
+  loop: false,
+});
+
+const $lgContainer2 = document.querySelector(".gallery-2");
+
+const lg2 = lightGallery($lgContainer2, {
+  showZoomInOutIcons: true,
+  actualSize: false,
+  selector: ".swiper-slide .lightgallery  a",
+  speed: 300,
+  controls: true,
+  loop: true,
+  counter: false,
+});
+
+const $lgContainer3 = document.querySelector(".gallery-3");
+
+const lg3 = lightGallery($lgContainer3, {
+  showZoomInOutIcons: true,
+  actualSize: false,
+  selector: ".swiper-slide .lightgallery  a",
   speed: 300,
   controls: true,
   loop: false,
 });
 
 // like btn
-const likeBtn = document.querySelector(".like__btn");
+const likeBtnParent = document.querySelectorAll(
+  ".slide__btns-footer .swiper-slide"
+);
+const btnSwiper = document.querySelector(".btn__swiper");
 
-likeBtn.addEventListener("click", () => {
-  if (likeBtn.textContent.toLowerCase() == "like") {
-    likeBtn.textContent = "Liked";
-    console.log(likeBtn.textContent);
-  } else if (likeBtn.textContent === "Liked") {
-    likeBtn.textContent = "Like";
-  }
-  likeBtn.classList.toggle("active");
+likeBtnParent.forEach((item) => {
+  const likeBtn = item.querySelector(".like__btn");
+
+  likeBtn.addEventListener("click", () => {
+    if (likeBtn.textContent.toLowerCase() == "like") {
+      likeBtn.textContent = "Liked";
+    } else if (likeBtn.textContent === "Liked") {
+      likeBtn.textContent = "Like";
+    }
+    btnSwiper.classList.toggle("active");
+    likeBtn.classList.toggle("active");
+  });
 });
 
 // select language
