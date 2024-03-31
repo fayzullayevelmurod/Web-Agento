@@ -519,9 +519,11 @@ body {
   .amenities {
     margin-bottom: 115px;
   }
+  .intro__sale-box ul:last-child li .left__box {
+    justify-content: center !important;
+  }
   .intro__sale li .left__box {
     width: 100%;
-    justify-content: center;
   }
   .intro__sale li .proto__name br {
     display: block;
