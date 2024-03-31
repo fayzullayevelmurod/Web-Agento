@@ -145,6 +145,9 @@ body {
   display: none;
 }
 // intro
+.intro__sale li .proto__name br {
+  display: none;
+}
 .intro {
   &__boxes {
     display: flex;
@@ -218,6 +221,7 @@ body {
     line-height: 20px;
     letter-spacing: 0.5px;
     color: #77757a;
+    text-transform: uppercase;
   }
   &-title {
     font-size: 25.6px;
@@ -226,9 +230,10 @@ body {
     margin-bottom: 24px;
     margin-top: 11px;
   }
+
   li {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     gap: 76px;
     margin-bottom: 12px;
@@ -502,11 +507,50 @@ body {
   .media__inline {
     display: inline-block;
   }
+  .intro__sale-box ul li .s-none {
+    display: none !important;
+  }
+  .intro__sale li p {
+    white-space: nowrap;
+  }
   .desktop__none {
     display: block;
   }
   .amenities {
     margin-bottom: 115px;
+  }
+  .intro__sale li .left__box {
+    width: 100%;
+    justify-content: center;
+  }
+  .intro__sale li .proto__name br {
+    display: block;
+  }
+  .intro__sale-box ul:last-child p {
+    width: 100%;
+  }
+  .intro__sale-box ul:last-child p .ru-lang {
+    display: block;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  .intro__sale-box ul:last-child p .ru-lang.active {
+    display: block !important;
+  }
+  .intro__sale-box ul:last-child p .ru-lang.active + br {
+    display: none !important;
+  }
+  .flex-media {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: center;
+  }
+  .intro__sale-box ul:last-child li {
+    width: 80px !important;
+  }
+  .intro__sale li .proto__name {
+    width: fit-content;
   }
   .media__none {
     display: none;

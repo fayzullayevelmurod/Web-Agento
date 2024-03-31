@@ -64,6 +64,31 @@ const likeBtnParent = document.querySelectorAll(
   ".slide__btns-footer .swiper-slide"
 );
 const btnSwiper = document.querySelector(".btn__swiper");
+let ruLangs = document.querySelectorAll(".ru-lang");
+let enLangs = document.querySelectorAll(".en-lang");
+
+function ruLanguage() {
+  ruLangs.forEach((lang) => {
+    lang.style.display = "inline-block";
+    lang.classList.add("active");
+  });
+
+  enLangs.forEach((lang) => {
+    lang.style.display = "none";
+    lang.classList.remove("active");
+  });
+}
+
+function enLanguage() {
+  ruLangs.forEach((lang) => {
+    lang.style.display = "none";
+  });
+
+  enLangs.forEach((lang) => {
+    lang.style.display = "inline-block";
+  });
+}
+enLanguage();
 
 likeBtnParent.forEach((item) => {
   const likeBtn = item.querySelector(".like__btn");
@@ -86,5 +111,13 @@ document.querySelectorAll(".option__value").forEach((option) => {
     const valueChildEng = document.querySelector(".option__value .eng");
     selectedBox.innerHTML = option.innerHTML;
     valueChildEng.style.display = "none";
+    console.log(option.innerHTML);
+    const lang = option.querySelector("p").textContent.toLowerCase();
+    if (lang == "en") {
+      enLanguage();
+      console.log("salom");
+    } else {
+      ruLanguage();
+    }
   });
 });
