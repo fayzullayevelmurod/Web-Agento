@@ -343,15 +343,15 @@ body {
   width: 100%;
   border-radius: 3px;
   border: 3px solid #25d366;
+  background: #25d366;
 }
 .slide__btns .btn__swiper.active {
   background: #bfe8ce;
 }
 .slide__btns .btn__swiper .like__btn {
-  margin: -1px -7px;
-  width: 120%;
-  border: 1px solid transparent;
+  width: 100%;
   border-radius: 0;
+  border: none;
   padding: 0;
   height: 100%;
   outline: none;
