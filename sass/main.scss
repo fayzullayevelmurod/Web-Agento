@@ -154,6 +154,10 @@ body {
     align-items: start;
     gap: 6px;
     justify-content: space-between;
+    height: 550px;
+    img {
+      object-fit: cover;
+    }
   }
 
   &__box-left {
@@ -165,6 +169,7 @@ body {
 
     & > img {
       width: 100%;
+      object-fit: cover;
       height: 100%;
     }
 
@@ -344,7 +349,12 @@ body {
       background: #bfe8ce;
     }
     .like__btn {
-      margin: -6px -7px;
+      margin: 0;
+      width: 100%;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      height: 100%;
     }
   }
 }
@@ -410,7 +420,6 @@ body {
     text-transform: capitalize;
   }
 }
-
 // amenities
 .amenities {
   &__container {

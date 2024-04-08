@@ -155,6 +155,11 @@ body {
   align-items: start;
   gap: 6px;
   justify-content: space-between;
+  height: 550px;
+}
+.intro__boxes img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .intro__box-left {
   position: relative;
@@ -165,6 +170,8 @@ body {
 }
 .intro__box-left > img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
 }
 .intro__box-left .intro__box-btns {
@@ -341,7 +348,12 @@ body {
   background: #bfe8ce;
 }
 .slide__btns .btn__swiper .like__btn {
-  margin: -6px -7px;
+  margin: 0;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .swiper-slide:not(.swiper-slide-active) {
